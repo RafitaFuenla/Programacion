@@ -208,16 +208,100 @@ public class Ejercicios {
 
         //Crea un programa que pida un número N
         // y use un bucle for para calcular la suma de todos los números desde 1 hasta N. Muestra el resultado final.
+        // RESULTADO POR CONSOLA:
+        // Introduce un número: 5
+        //Sumando: 1 + 2 + 3 + 4 + 5
+        //La suma de números del 1 al 5 es: 15
 
         System.out.println("Introduce un numero: ");
         int num = scanner.nextInt();
 
         int suma = 0;
+        String operacion = "Sumando: ";
 
         for (int i = 1; i <= num; i++) {
             suma += i;
+            operacion += i;
+
+            if (i < num) {
+                operacion += " + ";
+            }
         }
-        System.out.println(suma);
+
+        System.out.println(operacion);
+        System.out.printf("La suma de números del 1 al %d es: %d\n", num, suma);
+
+        scanner.close();
+        scanner = null;
+    }
+
+    public void ejercicio08() {
+        Scanner scanner = new Scanner(System.in);
+
+        //Desarrolla un programa que pida un número N
+        // y use un bucle for para contar cuántos números pares e impares hay desde 1 hasta N.
+        // Muestra ambos contadores.
+        // RESULTADO POR CONSOLA:
+        //Introduce un número: 10
+        // Recorriendo números del 1 al 10...
+        // Números pares encontrados: 5
+        // Números impares encontrados: 5
+
+        System.out.println("Introduce un numero:");
+        int num = scanner.nextInt();
+
+        System.out.printf("Recorriendo numero del 1 al %d\n.", num);
+
+        int contadorPares = 0;
+        int contadorImpares = 0;
+
+        for (int i = 1; i <= num; i++) {
+            if (i % 2 == 0) {
+                contadorPares++;
+            } else {
+                contadorImpares++;
+            }
+        }
+
+        System.out.printf("Numeros pares encontrados: %d\n", contadorPares);
+        System.out.printf("Numeros impares encontrados: %d\n", contadorImpares);
+
+        scanner.close();
+        scanner = null;
+    }
+
+    public void ejercicio09() {
+        Scanner scanner = new Scanner(System.in);
+
+        //Escribe un programa que pida un número entero positivo
+        // y calcule su factorial usando un bucle for.
+        // El factorial de N es: N! = N × (N-1) × (N-2) × ... × 1
+
+        // RESULTADO POR CONSOLA:
+        // Introduce un número: 5
+        //Calculando 5!
+        //5 x 4 x 3 x 2 x 1
+        //El factorial de 5 es: 120
+
+        System.out.println("Introduce un numero:");
+        int num = scanner.nextInt();
+
+        System.out.printf("Calculando %d!\n", num);
+
+        long multi = 1;
+        String operacion = "";
+
+        for (int i = num; i >= 1; i--) {
+            multi *= i;
+            operacion += i;
+
+            if (i > 1) {
+                operacion += " x ";
+            }
+        }
+
+        System.out.println(operacion);
+        System.out.printf("El factorial de %d es: %d\n", num, multi);
 
 
         scanner.close();
