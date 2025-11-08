@@ -308,4 +308,43 @@ public class Ejercicios {
         scanner = null;
     }
 
+    public void ejercicio10(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("--- EJERCICIOS ---");
+        System.out.println("1. Flexiones");
+        System.out.println("2. Abdominales");
+        System.out.println("3. Sentadillas");
+        System.out.println("Elige un ejercicio (1-3):");
+        int ejer = scanner.nextInt();
+        System.out.println("¿Cuántas repeticiones?:");
+        int rep = scanner.nextInt();
+
+        String nombreEjercicio = "";
+
+        switch (ejer){
+            case 1:
+                nombreEjercicio = "Flexiones";
+                System.out.println("Has elegido: " + nombreEjercicio);
+                break;
+            case 2:
+                nombreEjercicio = "Abdominales";
+                System.out.println("Has elegido: " + nombreEjercicio);
+                break;
+            case 3:
+                nombreEjercicio = "Sentadillas";
+                System.out.println("Has elegido: " + nombreEjercicio);
+                break;
+        }
+
+        for (int i = 1; i <= rep; i++) {
+            System.out.printf("Repetición %d completada\n", i);
+        }
+
+        System.out.printf("¡Ejercicio completado! Has hecho %d %s.\n", rep, nombreEjercicio.toLowerCase());
+
+        scanner.close();
+        scanner = null;
+    }
+
 }
