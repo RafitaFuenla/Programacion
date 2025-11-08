@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Ejercicios {
@@ -255,7 +255,7 @@ public class Ejercicios {
         scanner = null;
     }
 
-    public void ejercicio12() {
+    public void ejercicio12()   {
         Scanner scanner = new Scanner(System.in);
 
 
@@ -272,11 +272,11 @@ public class Ejercicios {
         System.out.println("Introduce una contraseña: Minimo 8 caracteres, al menos un numero y NO puede ser 12345678 o password");
         String password = scanner.next();
 
-        if (password.equals("12345678")) {
+        if (password.equals("12345678")) { // No peude ser igual a 12345678
             System.out.println("La contraseña no puede ser 12345678.");
-        } else if (password.equals("password")) {
+        } else if (password.equals("password")) { // No peude ser igual a password
             System.out.println("La contraseña no puede ser password.");
-        } else if (password.length() < 8) {
+        } else if (password.length() < 8) { // Cuantas letras tiene la palabra
             System.out.println("La contraseña tiene que tener al menos 8 digitos.");
         } else if (!password.matches(".*\\d.*")) {
             System.out.println("La contraseña tiene que tener al menos un número.");
