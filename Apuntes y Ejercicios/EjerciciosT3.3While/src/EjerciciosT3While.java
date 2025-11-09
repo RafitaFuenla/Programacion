@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 
 public class EjerciciosT3While {
     public Scanner scanner;
@@ -16,7 +19,7 @@ public class EjerciciosT3While {
 
         int crece = 0;
 
-        while (crece<num){
+        while (crece < num) {
             crece++;
             System.out.println(crece);
         }
@@ -27,7 +30,7 @@ public class EjerciciosT3While {
         scanner = null;
     }
 
-    public void ejercicio02(){
+    public void ejercicio02() {
         //Desarrolla un programa que pida al usuario una contraseña.
         // La contraseña correcta es "1234".
         // Usa un bucle do-while para seguir pidiendo la contraseña
@@ -38,7 +41,7 @@ public class EjerciciosT3While {
         System.out.println("Introduce la contraseña de 4 digitos numericos:");
         int pass = scanner.nextInt();
 
-        while (pass!=1234){
+        while (pass != 1234) {
             System.out.println("Contraseña incorrecta. Intenta de nuevo.");
             System.out.println("Introduce la contraseña de 4 digitos numericos:");
             pass = scanner.nextInt();
@@ -50,7 +53,7 @@ public class EjerciciosT3While {
         scanner = null;
     }
 
-    public void ejercicio03(){
+    public void ejercicio03() {
         Scanner scanner = new Scanner(System.in);
 
         // Escribe un programa que pida números al usuario y los vaya sumando.
@@ -63,9 +66,9 @@ public class EjerciciosT3While {
 
         int suma = 0;
 
-        while (num > 0){
+        while (num > 0) {
             suma = suma + num;
-            System.out.printf("Suma actual: %d\n",suma);
+            System.out.printf("Suma actual: %d\n", suma);
             System.out.println("Introduce un nuevo número para sumar (0 o negativo para terminar)::");
             num = scanner.nextInt();
         }
@@ -75,7 +78,7 @@ public class EjerciciosT3While {
         scanner = null;
     }
 
-    public void ejercicio04(){
+    public void ejercicio04() {
         Scanner scanner = new Scanner(System.in);
 
         // Crea un juego donde el programa elige un número secreto entre 1 y 10 (por ejemplo, 7).
@@ -90,7 +93,7 @@ public class EjerciciosT3While {
 
         int intentos = 1;
 
-        while (num != secretNum ){
+        while (num != secretNum) {
 
             if (num < secretNum) {
                 System.out.println("El número secreto es MAYOR");
@@ -109,4 +112,170 @@ public class EjerciciosT3While {
         scanner.close();
         scanner = null;
     }
-}s
+
+    public void ejercicio05() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Desarrolla un programa con un menú que se repita usando do-while.
+        // El menú debe tener 4 opciones:
+        // 1=Saludar, 2=Despedirse, 3=Ver hora actual (puedes mostrar un mensaje fijo), 4=Salir.
+        // Usa switch para procesar cada opción.
+        // El programa solo debe terminar cuando el usuario elija la opción 4.
+
+        //CONSOLA:
+        // --- MENÚ ---
+        //1. Saludar
+        //2. Despedirse
+        //3. Ver hora
+        //4. Salir
+        //Elige una opción: 3
+        //La hora actual es: 10:30
+
+        System.out.println("--- MENÚ ---");
+        System.out.println("1. Saludar");
+        System.out.println("2. Despedirse");
+        System.out.println("3. Ver hora");
+        System.out.println("4. Salir");
+
+        System.out.println("Elige una opcion:");
+        int opc = scanner.nextInt();
+
+        LocalTime hora = LocalTime.now();
+        System.out.println(hora);
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("HH:mm");
+
+        while (opc < 5) {
+            switch (opc) {
+                case 1 -> System.out.println("¡Hola! ¿Cómo estás?");
+                case 2 -> System.out.println("¿Nos vemos luego?");
+                case 3 -> System.out.println("La hora actual es: " + hora.format(formato));
+            }
+            System.out.println("Elige una opcion:");
+            opc = scanner.nextInt();
+        }
+
+        System.out.println("ADIOS!");
+
+        scanner.close();
+        scanner = null;
+    }
+
+    public void ejercicio06() {
+        Scanner scanner = new Scanner(System.in);
+
+        //Escribe un programa que pida un número N
+        // y use un bucle while para hacer una cuenta atrás desde N hasta 1, mostrando cada número.
+        // Al llegar a 1, debe mostrar "¡Despegue!".
+
+        System.out.println("Inserta un numero para comenzar la cuenta atras:");
+        int num = scanner.nextInt();
+
+        while (num > 0) {
+            System.out.println(num);
+            num--;
+        }
+
+        System.out.println("Despegamos!");
+
+        scanner.close();
+        scanner = null;
+    }
+
+    public void ejercicio07() {
+        Scanner scanner = new Scanner(System.in);
+
+        //Crea un programa que pida al usuario cuántas calificaciones va a introducir.
+        // Luego, usa un bucle while para pedir cada calificación una por una,
+        // sumarlas y al final calcular y mostrar el promedio.
+
+        // CONSOLA:
+        // ¿Cuántas calificaciones vas a introducir?: 4
+        //Introduce la calificación 1: 7.5
+        //Introduce la calificación 2: 8.0
+        //Introduce la calificación 3: 6.5
+        //Introduce la calificación 4: 9.0
+        //Suma total: 31.0
+        //Promedio de calificaciones: 7.75
+
+        System.out.println("¿Cuántas calificaciones vas a introducir?:");
+        int numCal = scanner.nextInt();
+
+        double sumaCal = 0;
+        int contador = 1;
+
+        while (contador <= numCal) {
+            System.out.printf("Introduce la calificacion (con numero decimal) %d:\n", contador);
+            double calificacion = scanner.nextDouble();  // Leer UNA calificación
+            sumaCal = sumaCal + calificacion;  // O: sumaCal += calificacion;
+            contador++;
+
+        }
+        System.out.println("Suma total: " + sumaCal);
+        double promedio = sumaCal / numCal;
+        System.out.printf("El promedio de las calificaciones es: %.2f\n", promedio);
+
+        scanner.close();
+        scanner = null;
+    }
+
+    public void ejercicio08() {
+        Scanner scanner = new Scanner(System.in);
+
+        //Desarrolla un programa que pida la edad del usuario.
+        // Usa un bucle do-while para validar que la edad introducida esté entre 0 y 120.
+        // Si no es válida, debe volver a pedirla. U
+        // na vez válida, muestra un mensaje de confirmación.
+
+        int anios;
+
+        do {
+            System.out.println("¿Cuánaños tienes?:");
+            anios = scanner.nextInt();
+
+            if (anios < 0 || anios > 120) {
+                System.out.println("Edad no válida. Debe estar entre 0 y 120");
+            }
+        }
+        while (anios < 0 || anios > 120);
+
+        System.out.printf("Edad valida: %d años. Gracias!", anios);
+
+        scanner.close();
+        scanner = null;
+    }
+
+    public void ejercicio09() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Crea un programa que pida al usuario cuántos estudiantes hay en una clase.
+        // Para cada estudiante, usa un bucle while para pedir su calificación numérica (0-10).
+        // Luego, usa un bucle for para mostrar todas las calificaciones
+        // y usa un switch para convertir cada nota numérica en letra:
+        // 9-10=A, 7-8=B, 5-6=C, 3-4=D, 0-2=F.
+
+        // CONSOLA:
+        // ¿Cuántos estudiantes hay?: 3
+        //Introduce la nota del estudiante 1 (0-10): 8
+        //Introduce la nota del estudiante 2 (0-10): 6
+        //Introduce la nota del estudiante 3 (0-10): 9
+        //
+        //--- REPORTE DE CALIFICACIONES ---
+        //Estudiante 1: 8 puntos = Calificación B
+        //Estudiante 2: 6 puntos = Calificación C
+        //Estudiante 3: 9 puntos = Calificación A
+
+        System.out.println("¿Cuántos estudiantes hay?:");
+        int alumno = scanner.nextInt();
+
+        int suma = 1;
+        while (alumno < 0) {
+            System.out.println();
+
+        }
+
+        scanner.close();
+        scanner = null;
+    }
+
+
+}
