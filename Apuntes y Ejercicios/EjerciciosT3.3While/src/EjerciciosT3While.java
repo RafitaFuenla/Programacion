@@ -267,15 +267,127 @@ public class EjerciciosT3While {
         System.out.println("¿Cuántos estudiantes hay?:");
         int alumno = scanner.nextInt();
 
-        int suma = 1;
-        while (alumno < 0) {
-            System.out.println();
+        int contadorAlum = 0;
 
+        int[] notas = new int[alumno];
+
+        while (contadorAlum < alumno) {
+            System.out.printf("Introduce la nota del estudiante %d (0-10): ", contadorAlum + 1);
+            int nota = scanner.nextInt();
+            notas[contadorAlum] = nota;  // Guardar la nota en la posición i
+
+            contadorAlum++;  // Aumentar el contador para la siguiente vuelta
+        }
+
+        System.out.println();
+        System.out.println("--- REPORTE DE CALIFICACIONES ---");
+
+        for (int i = 0; i < alumno; i++) {
+            int notaActual = notas[i];
+
+            String letra = "";
+
+            switch (notaActual) {
+
+                case 10, 9 -> letra = "A";
+                case 7, 8 -> letra = "B";
+                case 5, 6 -> letra = "C";
+                case 3, 4 -> letra = "D";
+                case 0, 1, 2 -> letra = "E";
+
+                // 9-10=A, 7-8=B, 5-6=C, 3-4=D, 0-2=F.
+            }
+
+            System.out.printf("Estudiante %d: %d puntos = Calificación %s\n",
+                    i + 1, notaActual, letra);
         }
 
         scanner.close();
         scanner = null;
     }
 
+    public void ejercicio10() {
+        Scanner scanner = new Scanner(System.in);
 
+        // Desarrolla un programa que simule un cajero automático.
+        // ✅El saldo inicial es 1000€.
+        // ✅ Usa un bucle do-while para mostrar un menú con opciones:
+        // ✅ 1=Consultar saldo, 2=Retirar dinero, 3=Depositar dinero, 4=Salir.
+        // ✅ Usa switch para cada opción.
+        // ✅ Para retirar dinero, usa un bucle while para validar
+        // ✅ que no se retire más del saldo disponible
+        // ✅ (si intenta retirar más, debe volver a pedir la cantidad).
+        // ✅ Para depositar, valida que sea una cantidad positiva.
+
+        // CONSOLA: --- MENÚ ---
+        //1. Consultar saldo
+        //2. Retirar dinero
+        //3. Depositar dinero
+        //4. Salir
+        //Elige una opción: 2
+        //¿Cuánto deseas retirar?: 1500
+        //Fondos insuficientes. Tu saldo es: 1000€
+        //¿Cuánto deseas retirar?: 300
+        //Retiro exitoso. Has retirado: 300€
+        //Nuevo saldo: 700€
+
+        int saldo = 1000;
+        int opc = 0;
+
+        do {
+            System.out.println("--- MENÚ ---");
+            System.out.println("1. Consultar saldo");
+            System.out.println("2. Retirar dinero");
+            System.out.println("3. Depositar dinero");
+            System.out.println("4. Salir");
+            System.out.println("Elige una opcion: ");
+            opc = scanner.nextInt();
+
+            switch (opc) {
+                case 1 -> System.out.printf("Tu saldo actual es: %d€\n", saldo);
+
+                case 2 -> {
+                    int retirar = 0;
+                    boolean cantidadValida = false;
+
+                    while (!cantidadValida) {
+                        System.out.println("¿Cuánto deseas retirar?:");
+                        retirar = scanner.nextInt();
+
+                        if (retirar > saldo) {
+                            System.out.printf("Fondos insuficientes. Tu saldo es: %d€\n", saldo);
+                        } else if (retirar <= 0) {
+                            System.out.println("La cantidad debe ser positiva");
+                        } else {
+                            saldo = saldo - retirar;
+                            System.out.printf("Retiro exitoso. Has retirado: %d€\n", retirar);
+                            System.out.printf("Nuevo saldo: %d€\n", saldo);
+                            cantidadValida = true;
+                        }
+                    }
+                }
+
+                case 3 -> {
+                    System.out.println("¿Cuánto deseas depositar?:");
+                    int depositar = scanner.nextInt();
+
+                    if (depositar > 0) {
+                        saldo = saldo + depositar;
+                        System.out.printf("Depósito exitoso. Has depositado: %d€\n", depositar);
+                        System.out.printf("Nuevo saldo: %d€\n", saldo);
+                    } else {
+                        System.out.println("La cantidad debe ser positiva");
+                    }
+                }
+
+                case 4 -> System.out.println("Gracias por usar el cajero. ¡Hasta luego!");
+
+                default -> System.out.println("Opción incorrecta, elige una opción del 1 al 4.");
+            }
+
+        } while (opc != 4);
+
+        scanner.close();
+        scanner = null;
+    }
 }

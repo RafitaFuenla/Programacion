@@ -3,17 +3,16 @@ public class Main {
 
     public static void main(String[] args) {
         EjerciciosT3While ejercicios = new EjerciciosT3While();
-       // ejercicios.ejercicio01();
-       // ejercicios.ejercicio02();
-       // ejercicios.ejercicio03();
-       // ejercicios.ejercicio04();
-       // ejercicios.ejercicio05();
-       // ejercicios.ejercicio06();
-       // ejercicios.ejercicio07();
+        // ejercicios.ejercicio01();
+        // ejercicios.ejercicio02();
+        // ejercicios.ejercicio03();
+        // ejercicios.ejercicio04();
+        // ejercicios.ejercicio05();
+        // ejercicios.ejercicio06();
+        // ejercicios.ejercicio07();
         // ejercicios.ejercicio08();
-       // ejercicios.ejercicio09();
-       // ejercicios.ejercicio10();
-
+        // ejercicios.ejercicio09();
+        ejercicios.ejercicio10();
 
     }
 }
