@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Apuntes y Ejercicios.iml" filepath="$PROJECT_DIR$/.idea/Apuntes y Ejercicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosT1variables/EjerciciosT1variables.iml" filepath="$PROJECT_DIR$/EjerciciosT1variables/EjerciciosT1variables.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosT2operadoresAritmeticos/EjerciciosT2operadoresAritmeticos.iml" filepath="$PROJECT_DIR$/EjerciciosT2operadoresAritmeticos/EjerciciosT2operadoresAritmeticos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosT3.1elseIf/EjerciciosT3.1elseIf.iml" filepath="$PROJECT_DIR$/EjerciciosT3.1elseIf/EjerciciosT3.1elseIf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosT3.2switch/EjerciciosT3.2switch.iml" filepath="$PROJECT_DIR$/EjerciciosT3.2switch/EjerciciosT3.2switch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjerciciosT3.3While/EjerciciosT3.3While.iml" filepath="$PROJECT_DIR$/EjerciciosT3.3While/EjerciciosT3.3While.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjericicioT3_dardos/EjericicioT3_dardos.iml" filepath="$PROJECT_DIR$/EjericicioT3_dardos/EjericicioT3_dardos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProyectoInicial/ProyectoInicial.iml" filepath="$PROJECT_DIR$/ProyectoInicial/ProyectoInicial.iml" />
+    </modules>
+  </component>
+</project>
