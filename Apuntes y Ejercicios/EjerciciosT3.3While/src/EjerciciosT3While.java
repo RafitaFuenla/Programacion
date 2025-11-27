@@ -298,6 +298,7 @@ public class EjerciciosT3While {
                 // 9-10=A, 7-8=B, 5-6=C, 3-4=D, 0-2=F.
             }
 
+
             System.out.printf("Estudiante %d: %d puntos = Calificación %s\n",
                     i + 1, notaActual, letra);
         }
