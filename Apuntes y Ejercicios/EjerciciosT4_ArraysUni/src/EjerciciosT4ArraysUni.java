@@ -163,13 +163,13 @@ public class EjerciciosT4ArraysUni {
 
         int contador = 0;
 
-        for (String item : animales){
-            if (item.equals(palabra)) {
+        for (int i = 0; i < animales.length ; i++) {
+
+
+            if (animales[i].equals(palabra)) {
                 contador++;
             }
-            else {
-                System.out.println("Tienes que iontroducir un animal correcto (gato, perro, pajaro, pez o conejo).");
-            }
+
         }
         System.out.printf("La palabra %s aparece %d veces en el array", palabra, contador);
 
