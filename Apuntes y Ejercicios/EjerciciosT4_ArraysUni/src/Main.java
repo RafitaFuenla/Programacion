@@ -8,9 +8,9 @@ public class Main {
         // ejerciciosT4ArraysUni.ejercicio05();
         // ejerciciosT4ArraysUni.ejercicio06();
         // ejerciciosT4ArraysUni.ejercicio07();
-         ejerciciosT4ArraysUni.ejercicio08();
+        // ejerciciosT4ArraysUni.ejercicio08();
         // ejerciciosT4ArraysUni.ejercicio09();
-        // ejerciciosT4ArraysUni.ejercicio10();
+         ejerciciosT4ArraysUni.ejercicio10();
 
     }
 }

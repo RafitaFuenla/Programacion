@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 
 public class EjerciciosT4ArraysUni {
+    private int i;
+
     public void ejercicio01() {
 
         String[] frutas = {"Manzana", "Plátano", "Naranja", "Fresa", "Uva"};
@@ -156,23 +158,134 @@ public class EjerciciosT4ArraysUni {
 
         Scanner sc = new Scanner(System.in);
 
-        String[] animales = {"gato", "perro", "gato", "pájaro", "gato", "pez", "perro", "gato", "conejo", "perro"};
+        String[] animales = {"gato", "perro", "gato", "pajaro", "gato", "pez", "perro", "gato", "conejo", "perro"};
 
         System.out.println("Introduce la palabra a buscar (gato, perro, pajaro, pez o conejo)");
         String palabra = sc.next().toLowerCase();
 
         int contador = 0;
 
-        for (int i = 0; i < animales.length ; i++) {
+        for (String item : animales) {
 
-
-            if (animales[i].equals(palabra)) {
+            if (item.equals(palabra)) {
                 contador++;
             }
-
         }
         System.out.printf("La palabra %s aparece %d veces en el array", palabra, contador);
 
         sc.close();
     }
+
+    public void ejercicio09() {
+        // Escribe un programa que cree un array de 7 números.
+        // Usa un bucle for para crear un nuevo array con los elementos en orden inverso.
+        // Muestra ambos arrays: el original y el invertido.
+
+        int[] original = new int[7];
+        int[] invertido = new int[original.length];
+
+        // Rellenar de 2 en 2
+        for (int i = 0; i < original.length; i++) {
+            original[i] = i * 2;
+        }
+
+        for (int i = 0; i < original.length; i++) {
+            invertido[i] = original[(original.length - 1) - i];
+        }
+
+        // Imprimir
+        System.out.print("Array original: [");
+        for (int i = 0; i < original.length; i++) {
+            System.out.print(original[i]);
+            if (i < original.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+
+
+        System.out.print("Array invertido: [");
+        for (int i = 0; i < invertido.length; i++) {
+            System.out.print(invertido[i]);
+            if (i < invertido.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+
+    public void ejercicio10() {
+        // Desarrolla un programa que pida al usuario cuántos estudiantes hay en una clase.
+        // Crea un array para almacenar sus calificaciones (0-10).
+        // Usa un bucle while para rellenar el array con las notas.
+        // Luego, usa un bucle for para:
+
+        //1. Mostrar todas las calificaciones
+        //2. Calcular el promedio de la clase
+        //3. Contar cuántos estudiantes aprobaron (nota ≥ 5)
+        //4. Encontrar la nota más alta y la más baja
+        //Ejemplo de salida por consola:
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("¿Cuántos estudiantes hay en clase?");
+        double[] estudiantes = new double[sc.nextInt()];
+
+        // 1. Rellenar el array con un bucle while
+        int i = 0;
+        while (i < estudiantes.length) {
+            System.out.printf("Introduce la nota del estudiante %d (0-10): ", i + 1);
+            double nota = sc.nextDouble();
+
+            // Validar que la nota esté entre 0 y 10
+            if (nota >= 0 && nota <= 10) {
+                estudiantes[i] = nota;
+                i++; // Solo avanzamos si la nota es válida
+            } else {
+                System.out.println("Nota inválida. Debe estar entre 0 y 10.");
+            }
+        }
+
+        // 2. Mostrar todas las calificaciones con un bucle for
+        System.out.println("\n--- Calificaciones ---");
+        for (int j = 0; j < estudiantes.length; j++) {
+            System.out.printf("Estudiante %d: %.2f\n", j + 1, estudiantes[j]);
+        }
+
+        // 3. Calcular el promedio
+        double suma = 0;
+        for (double nota : estudiantes) {
+            suma += nota;
+        }
+        double promedio = suma / estudiantes.length;
+        System.out.printf("\nPromedio de la clase: %.2f\n", promedio);
+
+        // 4. Contar aprobados
+        int aprobados = 0;
+        for (double nota : estudiantes) {
+            if (nota >= 5) {
+                aprobados++;
+            }
+        }
+        System.out.println("Estudiantes aprobados: " + aprobados);
+
+        // 5. Encontrar nota más alta y más baja
+        double notaMasAlta = estudiantes[0];
+        double notaMasBaja = estudiantes[0];
+
+        for (double nota : estudiantes) {
+            if (nota > notaMasAlta) {
+                notaMasAlta = nota;
+            }
+            if (nota < notaMasBaja) {
+                notaMasBaja = nota;
+            }
+        }
+
+        System.out.printf("Nota más alta: %.2f\n", notaMasAlta);
+        System.out.printf("Nota más baja: %.2f\n", notaMasBaja);
+
+        sc.close();
+    }
 }
+
