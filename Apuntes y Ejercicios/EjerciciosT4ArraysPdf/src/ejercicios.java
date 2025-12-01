@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class ejercicios {
 
-    public void ejercicio01(){
+    public void ejercicio01() {
         //Crea un programa que permita sumar arrays multidimensionales. Para ellp siguiente estos pasos:
         //a. Pide al usuario el tamaño de las matrices
         //b. Se crearán automáticamente dos matrices con números aleatorios entre 0 y 50
@@ -12,35 +12,47 @@ public class ejercicios {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce el tamañano de la matriz 1.");
-        int[] matriz1 = new int [sc.nextInt()];
+        int filas, columnas;
 
-        System.out.println("Introduce el tamaño de la matriz 2.");
-        int[] matriz2 =new int [sc.nextInt()];
+        System.out.println("Introduce el número de filas:");
+        filas = sc.nextInt();
+        System.out.println("Introduce el número de columnas:");
+        columnas = sc.nextInt();
 
+        int[][] matriz1 = new int[filas][columnas];
+        int[][] matriz2 = new int[filas][columnas];
 
+        System.out.println();
+        System.out.println("=== MATRIZ 1 ===");
         for (int i = 0; i < matriz1.length; i++) {
-            matriz1[i] = (int) (Math.random()*50)+1;
+            for (int j = 0; j < matriz1[i].length; j++) {
+                matriz1[i][j] = (int) (Math.random() * 50) + 1;
+                System.out.print(matriz1[i][j] + "\t");
+            }
+            System.out.println();
         }
 
-        for (int i : matriz1) {
-            System.out.printf("Matriz1 = %d%n", i);
-        }
-
+        System.out.println();
+        System.out.println("=== MATRIZ 1 ===");
         for (int i = 0; i < matriz2.length; i++) {
-            matriz2[i] = (int) (Math.random()*50)+1;
+            for (int j = 0; j < matriz2[i].length; j++) {
+                matriz2[i][j] = (int) (Math.random() * 50) + 1;
+                System.out.print(matriz2[i][j] + "\t");
+            }
+            System.out.println();
         }
 
-        for (int i : matriz2) {
-            System.out.printf("Matriz2 = %d%n", i);
+        System.out.println();
+        System.out.println("=== SUMA DE MATRICES ===");
+        int[][] sumaMatrices = new int[filas][columnas];
+
+        for (int i = 0; i < sumaMatrices.length; i++) {
+            for (int j = 0; j < sumaMatrices[i].length; j++) {
+                sumaMatrices[i][j] = matriz1[i][j] + matriz2[i][j];
+                System.out.print(sumaMatrices[i][j] + "\t");
+            }
+            System.out.println();
         }
-
-//        int[] sumaMatrices = new int [matriz1+matriz2];
-
-
-
-
-
         sc.close();
     }
 }
