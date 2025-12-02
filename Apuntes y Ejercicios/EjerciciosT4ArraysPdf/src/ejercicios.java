@@ -33,7 +33,7 @@ public class ejercicios {
         }
 
         System.out.println();
-        System.out.println("=== MATRIZ 1 ===");
+        System.out.println("=== MATRIZ 2     ===");
         for (int i = 0; i < matriz2.length; i++) {
             for (int j = 0; j < matriz2[i].length; j++) {
                 matriz2[i][j] = (int) (Math.random() * 50) + 1;
@@ -67,24 +67,31 @@ public class ejercicios {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Elije una opcion de las siguientes:");
-        System.out.println("a. Imprimir (escibe solo la letra).");
-        System.out.println("b. Mover a la izquiera (escibe solo la letra).");
-        System.out.println("c. Mover a la derecha (escibe solo la letra).");
-        System.out.println("d. Invertir (escibe solo la letra).");
-        char eleccion = sc.next().charAt(0);
-
         int[] ejemplo = new int[10];
         rellenarArray(ejemplo);
+        char eleccion;
+        do {
 
-        switch (eleccion) {
-            case 'a' -> mostarArray(ejemplo);
+
+            System.out.println("Elije una opcion de las siguientes:");
+            System.out.println("a. Mostrar (escibe solo la letra).");
+            System.out.println("b. Mover a la izquiera (escibe solo la letra).");
+            System.out.println("c. Mover a la derecha (escibe solo la letra).");
+            System.out.println("d. Invertir (escibe solo la letra).");
+            System.out.println("e. Salir (escibe solo la letra).");
+            System.out.println();
+
+            eleccion = sc.next().charAt(0);
+
+
+            switch (eleccion) {
+                case 'a' -> mostrarArray(ejemplo);
 //            case 'b' ->
 //            case 'c' ->
-            case 'd' -> invertirArray(ejemplo);
-        }
-
-
+                case 'd' -> invertirArray(ejemplo);
+                case 'e' -> System.out.println("Hasta luego");
+            }
+        } while (eleccion != 'e');
         sc.close();
     }
 
@@ -95,26 +102,26 @@ public class ejercicios {
         }
     }
 
-    public void mostarArray(int[] array) {
+    public void mostrarArray(int[] array) {
         System.out.print("El array es: ");
-        for (int num : array) {
-            System.out.print(num);
-            if (num < array.length -1){
-                System.out.println(", ");
+        for (int i = 0; i < array.length; i++) {  // Usa índice i
+            System.out.print(array[i]);
+            if (i < array.length - 1) {  // Compara índice
+                System.out.print(", ");  // print, no println
             }
         }
         System.out.println();
     }
 
     public void invertirArray(int[] array) {
-        mostarArray(array);
+        mostrarArray(array);
         for (int i = 0; i < array.length / 2; i++) {
             int temp = array[i];
             array[i] = array[array.length - 1 - i];
             array[array.length - 1 - i] = temp;
         }
         System.out.println("Array invertido:");
-        mostarArray(array);
+        mostrarArray(array);
     }
 }
 
