@@ -71,8 +71,7 @@ public class ejercicios {
         rellenarArray(ejemplo);
         char eleccion;
         do {
-
-
+            System.out.println();
             System.out.println("Elije una opcion de las siguientes:");
             System.out.println("a. Mostrar (escibe solo la letra).");
             System.out.println("b. Mover a la izquiera (escibe solo la letra).");
@@ -82,7 +81,6 @@ public class ejercicios {
             System.out.println();
 
             eleccion = sc.next().charAt(0);
-
 
             switch (eleccion) {
                 case 'a' -> mostrarArray(ejemplo);
@@ -94,7 +92,6 @@ public class ejercicios {
         } while (eleccion != 'e');
         sc.close();
     }
-
 
     public void rellenarArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -110,6 +107,7 @@ public class ejercicios {
                 System.out.print(", ");  // print, no println
             }
         }
+        System.out.println();
         System.out.println();
     }
 
