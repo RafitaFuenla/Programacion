@@ -74,7 +74,7 @@ public class ejercicios {
             System.out.println();
             System.out.println("Elije una opcion de las siguientes:");
             System.out.println("a. Mostrar (escibe solo la letra).");
-            System.out.println("b. Mover a la izquiera (escibe solo la letra).");
+            System.out.println("b. Mover a la izquierda (escibe solo la letra).");
             System.out.println("c. Mover a la derecha (escibe solo la letra).");
             System.out.println("d. Invertir (escibe solo la letra).");
             System.out.println("e. Salir (escibe solo la letra).");
@@ -84,10 +84,11 @@ public class ejercicios {
 
             switch (eleccion) {
                 case 'a' -> mostrarArray(ejemplo);
-//            case 'b' ->
-//            case 'c' ->
+                case 'b' -> moverArrayIzquierda(ejemplo);
+                case 'c' -> moverArrayDerecha(ejemplo);
                 case 'd' -> invertirArray(ejemplo);
                 case 'e' -> System.out.println("Hasta luego");
+                default -> System.out.println("Opcion no valida.");
             }
         } while (eleccion != 'e');
         sc.close();
@@ -100,6 +101,7 @@ public class ejercicios {
     }
 
     public void mostrarArray(int[] array) {
+        rellenarArray(array);
         System.out.print("El array es: ");
         for (int i = 0; i < array.length; i++) {  // Usa índice i
             System.out.print(array[i]);
@@ -108,7 +110,29 @@ public class ejercicios {
             }
         }
         System.out.println();
-        System.out.println();
+    }
+
+    public void moverArrayIzquierda(int[] array){
+        mostrarArray(array);
+        int temporal = array[0];
+        for (int i = 0; i < array.length-1 ; i++) {
+                array[i] = array[i+1];
+        }
+        array[array.length-1] = temporal;
+        System.out.println("Array movido a la iszquierda:");
+        mostrarArray(array);
+    }
+
+    public void moverArrayDerecha (int[] array){
+        mostrarArray(array);
+        int temporal = array[array.length-1];
+        for (int i = array.length -1; i > 0 ; i--) {
+            array[i] = array[i-1];
+        }
+        array[0]=temporal;
+
+        System.out.println("Array movido a la derecha:");
+        mostrarArray(array);
     }
 
     public void invertirArray(int[] array) {
