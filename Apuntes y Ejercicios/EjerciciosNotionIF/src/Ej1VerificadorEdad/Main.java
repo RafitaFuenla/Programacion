@@ -1,4 +1,4 @@
-package Ejercicio1VerificadorEdad;
+package Ej1VerificadorEdad;
 
 public class Main {
     public static void main(String[] args) {

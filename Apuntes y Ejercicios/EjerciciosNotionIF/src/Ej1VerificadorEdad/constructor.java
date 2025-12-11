@@ -1,4 +1,4 @@
-package Ejercicio1VerificadorEdad;
+package Ej1VerificadorEdad;
 import java.util.Scanner;
 
 public class constructor {

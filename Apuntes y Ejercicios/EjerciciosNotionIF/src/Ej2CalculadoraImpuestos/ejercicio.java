@@ -1,4 +1,4 @@
-package Ejercicio2CalculadoraImpuestos;
+package Ej2CalculadoraImpuestos;
 
 import java.util.Scanner;
 

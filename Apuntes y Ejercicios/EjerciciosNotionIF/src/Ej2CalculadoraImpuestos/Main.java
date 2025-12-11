@@ -1,4 +1,4 @@
-package Ejercicio2CalculadoraImpuestos;
+package Ej2CalculadoraImpuestos;
 
 public class Main {
     public static void main(String[] args) {
