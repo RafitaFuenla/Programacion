@@ -1,4 +1,4 @@
-package Ej5VerificadorAñoBisiesto;
+package Ej5VerificadorAnioBisiesto;
 
 public class Main {
     public static void main(String[] args) {

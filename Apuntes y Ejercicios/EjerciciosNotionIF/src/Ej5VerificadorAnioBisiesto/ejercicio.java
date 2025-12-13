@@ -1,4 +1,4 @@
-package Ej5VerificadorAñoBisiesto;
+package Ej5VerificadorAnioBisiesto;
 
 import java.util.Scanner;
 
