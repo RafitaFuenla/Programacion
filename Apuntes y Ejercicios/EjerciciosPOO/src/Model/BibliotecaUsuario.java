@@ -3,15 +3,15 @@ package Model;
 public class BibliotecaUsuario {
 
     private static int contadorUsuario = 101;
+    private String nombre;
+    private int numeroSocio;
+
 
     public BibliotecaUsuario(String nombre) {
         this.nombre = nombre;
         this.numeroSocio = contadorUsuario;
         contadorUsuario++;
     }
-
-    private String nombre;
-    private int numeroSocio;
 
     @Override
     public String toString() {
