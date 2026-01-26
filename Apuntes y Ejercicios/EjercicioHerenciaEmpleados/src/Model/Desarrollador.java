@@ -1,6 +1,6 @@
 package Model;
 
-public class Desarrollador extends Empleado {
+public final class Desarrollador extends Empleado {
 
     private String lenguajePrincipal;
 

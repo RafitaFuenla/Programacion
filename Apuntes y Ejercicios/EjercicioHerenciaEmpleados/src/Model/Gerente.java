@@ -1,6 +1,6 @@
 package Model;
 
-public class Gerente extends Empleado {
+public final class Gerente extends Empleado {
 
     private double bonus;
 
