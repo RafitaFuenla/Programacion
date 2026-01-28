@@ -1,0 +1,56 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Página-1" id="eHlI_aeMswY3aokLblQg">
+    <mxGraphModel dx="878" dy="333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-18" value="Multimedia&amp;nbsp;" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="311" y="130" width="210" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-19" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- INT Static contadorID&lt;/div&gt;&lt;div&gt;- INT idenfiticador&lt;/div&gt;&lt;div&gt;- STR titulo&lt;/div&gt;&lt;div&gt;- STR autor&lt;/div&gt;&lt;div&gt;- INT tamaño&lt;/div&gt;&lt;div&gt;- STR formato&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;contrusctor ()&lt;/div&gt;&lt;div&gt;&lt;div&gt;contrusctor (ti, aut, tam, forma)&lt;/div&gt;&lt;div&gt;mostrarDatos ()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Get/Set&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="lUuvri0Y_MXhAi8EkxVI-18">
+          <mxGeometry y="50" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-21" value="FINAL EXTEND Libro" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="61" y="459" width="210" height="221" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-22" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- INT ISBN&lt;/div&gt;&lt;div&gt;- INT nPaginas&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;contrusctor ()&lt;/div&gt;&lt;div&gt;&lt;div&gt;contrusctor (SUPER, IS, nP)&lt;/div&gt;&lt;div&gt;mostrarDatos ()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Get/Set&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="lUuvri0Y_MXhAi8EkxVI-21">
+          <mxGeometry y="50" width="210" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-23" value="FINAL&amp;nbsp;EXTEND Video" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300.5" y="460" width="231" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-24" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- STR director&lt;/div&gt;&lt;div&gt;- STR actores&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;contrusctor ()&lt;/div&gt;&lt;div&gt;&lt;div&gt;contrusctor (SUPER,ti, aut, tam, forma)&lt;/div&gt;&lt;div&gt;mostrarDatos ()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Get/Set&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="lUuvri0Y_MXhAi8EkxVI-23">
+          <mxGeometry y="50" width="231" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-25" value="FINAL&amp;nbsp;EXTEND Audio" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="561" y="459" width="210" height="221" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-26" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- INT duracion&lt;/div&gt;&lt;div&gt;- STR soporte&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;----------------&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;constructor ()&lt;/div&gt;&lt;div&gt;&lt;div&gt;constructor (SUPER, dur, sop)&lt;/div&gt;&lt;div&gt;mostrarDatos ()&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Get/Set&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="lUuvri0Y_MXhAi8EkxVI-25">
+          <mxGeometry y="50" width="210" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="lUuvri0Y_MXhAi8EkxVI-19" target="lUuvri0Y_MXhAi8EkxVI-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="410" />
+              <mxPoint x="166" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lUuvri0Y_MXhAi8EkxVI-19" target="lUuvri0Y_MXhAi8EkxVI-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="lUuvri0Y_MXhAi8EkxVI-19" target="lUuvri0Y_MXhAi8EkxVI-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="416" y="410" />
+              <mxPoint x="666" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lUuvri0Y_MXhAi8EkxVI-33" value="Añadir a la colección (preguntara que tipo de objeto y los elementos &#xa;correspondientes) &#xa;    a. Los datos serán pedidos por consola &#xa;    b. Una vez añadido el programa mostrará una confirmación de que el elemento está bien añadido&#xa;&#xa;&#xa;2. Eliminar de la colección &#xa;    a. Se pedirá el identificador del elemento a eliminar &#xa;    b. Una vez eliminado el programa mostrará una confirmación de que el elemento está bien eliminado&#xa;&#xa;3. Listar elementos &#xa;    a. Video &#xa;    b. Audio &#xa;    c. Todos&#xa;4. Salir" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="111" y="710" width="610" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
