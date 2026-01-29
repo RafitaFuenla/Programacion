@@ -2,7 +2,7 @@ package Model;
 
 public class Multimedia {
 
-    private static int contadorID = 0;
+    private static int contadorID = 1;
 
     private  int identificador;
     private String titulo, autor;

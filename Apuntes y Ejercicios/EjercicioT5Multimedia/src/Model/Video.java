@@ -4,6 +4,7 @@ public final class Video extends Multimedia{
 
     private String director, actores;
 
+    public Video() {}
     public Video(String titulo, String autor, int tamanio, String formato, String director, String actores) {
         super(titulo, autor, tamanio, formato);
         this.director = director;
@@ -14,6 +15,8 @@ public final class Video extends Multimedia{
         this.director = director;
         this.actores = actores;
     }
+
+
 
     @Override
     public void mostrarDatos() {

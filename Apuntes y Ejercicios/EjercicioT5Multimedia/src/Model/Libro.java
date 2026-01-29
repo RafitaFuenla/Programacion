@@ -2,7 +2,7 @@ package Model;
 
 public final class  Libro extends  Multimedia{
 
-    private static int  contadorISBN = 1000;
+    private static int  contadorISBN = 1001;
 
     private int ISBN, nPaginas;
 
